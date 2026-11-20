@@ -1,0 +1,44 @@
+# Environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Raw dataset (downloaded automatically and checksum-verified by fmnist/data.py)
+data/
+
+# Runtime temp files and caches (joblib memmaps, matplotlib font cache)
+temp/
+*.tmp
+
+# Logs: keep training-run logs, ignore runtime/server logs
+*.log
+!logs/train_*.log
+
+# Original jury notebook contains student names and roll numbers: kept locally only.
+# A sanitized copy lives in notebooks/.
+GenAI_Jury2_FashionMNIST_LabelSpreading.ipynb
+
+# Sanitized notebook: held back until approved for publication
+notebooks/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Credentials and secrets
+.env
+.env.*
+.streamlit/secrets.toml
+*.pem
+*.key
+*.pfx
+credentials*.json
+secrets*.json

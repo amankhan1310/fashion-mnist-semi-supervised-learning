@@ -1,0 +1,29 @@
+[    1.0s] Data: train (60000, 784), test (10000, 784); labelled 6,000, unlabelled 54,000
+[    8.7s] PCA 784->50: 86.3% variance, 7.71s
+[    8.7s] Tuning Logistic Regression (5-fold CV on labelled samples)...
+[   52.2s]   best {'C': 0.1}
+[   52.2s] Tuning Random Forest (5-fold CV on labelled samples)...
+[  155.6s]   best {'n_estimators': 300, 'max_depth': 20, 'max_features': 'sqrt'}
+[  155.6s] Tuning LabelSpreading (5-fold CV over known labels, graph on all 60,000 training images)...
+[  658.8s]   best {'n_neighbors': 20, 'alpha': 0.8}
+[  661.3s] LR fitted in 2.35s, test acc 0.8307
+[  668.0s] RF fitted in 4.29s, test acc 0.8432
+[  682.2s] LS fitted in 9.31s (54 iters), test acc 0.8190, transductive acc 0.8260, unreached test images 0
+[  682.3s] Label-percentage sweep (tuned hyperparameters reused, as in the notebook)...
+[  711.8s]   sweep seed=42  5% labels: LO=0.8202  RA=0.8339  LA=0.8065
+[  745.7s]   sweep seed=42 10% labels: LO=0.8307  RA=0.8432  LA=0.8190
+[  779.6s]   sweep seed=42 20% labels: LO=0.8382  RA=0.8530  LA=0.8243
+[  822.0s]   sweep seed=42 30% labels: LO=0.8398  RA=0.8594  LA=0.8252
+[  870.8s]   sweep seed=42 50% labels: LO=0.8429  RA=0.8687  LA=0.8280
+[  880.8s]   sweep seed=123  5% labels: LO=0.8184  RA=0.8304  LA=0.8075
+[  901.6s]   sweep seed=123 10% labels: LO=0.8272  RA=0.8457  LA=0.8128
+[  934.8s]   sweep seed=123 20% labels: LO=0.8360  RA=0.8532  LA=0.8215
+[  973.9s]   sweep seed=123 30% labels: LO=0.8395  RA=0.8599  LA=0.8245
+[ 1046.6s]   sweep seed=123 50% labels: LO=0.8437  RA=0.8670  LA=0.8264
+[ 1061.9s]   sweep seed=2026  5% labels: LO=0.8179  RA=0.8310  LA=0.8083
+[ 1078.2s]   sweep seed=2026 10% labels: LO=0.8296  RA=0.8466  LA=0.8168
+[ 1101.6s]   sweep seed=2026 20% labels: LO=0.8361  RA=0.8576  LA=0.8227
+[ 1134.0s]   sweep seed=2026 30% labels: LO=0.8402  RA=0.8623  LA=0.8250
+[ 1219.9s]   sweep seed=2026 50% labels: LO=0.8441  RA=0.8674  LA=0.8275
+[ 1225.2s] Saved results.json, test_predictions.npz, models/ and figures/. Done.
+exit=0
